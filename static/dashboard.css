@@ -1,0 +1,115 @@
+:root {
+  color-scheme: dark;
+  --bg: #10140f;
+  --panel: #1a2118;
+  --line: #2d3828;
+  --text: #e7efe2;
+  --muted: #9aa892;
+  --p1: #e23b2f;
+  --p2: #ef7b2a;
+  --p3: #d6a31e;
+  --p4: #6f93c7;
+  --ok: #6ea36a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.45 "Segoe UI", sans-serif;
+}
+
+header, .counts, .layout {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  padding: 28px 0 12px;
+}
+
+h1, h2, p { margin: 0; }
+
+h1 { font-size: 28px; font-weight: 650; letter-spacing: -0.03em; }
+
+h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 10px; }
+
+.eyebrow { color: var(--muted); font-size: 13px; margin-bottom: 4px; }
+
+.meta { text-align: right; color: var(--muted); }
+
+.link { display: block; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+.link.live { color: var(--ok); }
+
+.counts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 12px 0 22px;
+}
+
+.count {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--tone);
+  padding: 12px 14px;
+}
+
+.count strong { display: block; font-size: 28px; }
+
+.count span { color: var(--muted); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 22px;
+  padding-bottom: 40px;
+}
+
+.machines, .alarms { display: grid; gap: 10px; }
+
+.card, .alarm {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--tone);
+  padding: 14px 14px 12px;
+}
+
+.card header, .alarm header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--tone);
+}
+
+.area, .quiet, .drivers { color: var(--muted); font-size: 13px; }
+
+.component { margin: 8px 0 2px; font-size: 18px; }
+
+.action { margin: 0 0 8px; }
+
+.drivers { margin: 0; padding-left: 16px; }
+
+@media (max-width: 860px) {
+  .layout, .counts { grid-template-columns: 1fr; }
+  header { flex-direction: column; align-items: start; }
+  .meta { text-align: left; }
+}

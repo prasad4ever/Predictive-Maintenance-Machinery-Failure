@@ -1,0 +1,193 @@
+{
+  "chosen_model": "hist_gradient_boosting",
+  "selection_rule": "0.55*P1 F1 + 0.25*P2 F1 + 0.20*macro F1, measured on the time-held validation window",
+  "validation_score": 0.6266,
+  "models": [
+    {
+      "model": "logistic_regression",
+      "validation_score": 0.487,
+      "validation": {
+        "OK": {
+          "precision": 0.9988,
+          "recall": 0.9363,
+          "support": 8064
+        },
+        "P4": {
+          "precision": 0.0539,
+          "recall": 0.5208,
+          "support": 48
+        },
+        "P3": {
+          "precision": 0.1887,
+          "recall": 0.4167,
+          "support": 48
+        },
+        "P2": {
+          "precision": 0.2981,
+          "recall": 0.6458,
+          "support": 48
+        },
+        "P1": {
+          "precision": 0.8261,
+          "recall": 0.3958,
+          "support": 48
+        },
+        "macro_f1": 0.4534
+      },
+      "test": {
+        "OK": {
+          "precision": 0.9989,
+          "recall": 0.9351,
+          "support": 8064
+        },
+        "P4": {
+          "precision": 0.0479,
+          "recall": 0.7333,
+          "support": 30
+        },
+        "P3": {
+          "precision": 0.2424,
+          "recall": 0.7059,
+          "support": 34
+        },
+        "P2": {
+          "precision": 0.6324,
+          "recall": 0.6935,
+          "support": 62
+        },
+        "P1": {
+          "precision": 0.8148,
+          "recall": 1.0,
+          "support": 66
+        },
+        "macro_f1": 0.5953
+      }
+    },
+    {
+      "model": "random_forest",
+      "validation_score": 0.6142,
+      "validation": {
+        "OK": {
+          "precision": 0.9916,
+          "recall": 1.0,
+          "support": 8064
+        },
+        "P4": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 48
+        },
+        "P3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 48
+        },
+        "P2": {
+          "precision": 0.4891,
+          "recall": 0.9375,
+          "support": 48
+        },
+        "P1": {
+          "precision": 0.96,
+          "recall": 0.5,
+          "support": 48
+        },
+        "macro_f1": 0.4592
+      },
+      "test": {
+        "OK": {
+          "precision": 0.9935,
+          "recall": 1.0,
+          "support": 8064
+        },
+        "P4": {
+          "precision": 0.4286,
+          "recall": 0.2,
+          "support": 30
+        },
+        "P3": {
+          "precision": 1.0,
+          "recall": 0.7059,
+          "support": 34
+        },
+        "P2": {
+          "precision": 0.9429,
+          "recall": 0.5323,
+          "support": 62
+        },
+        "P1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 66
+        },
+        "macro_f1": 0.7555
+      }
+    },
+    {
+      "model": "hist_gradient_boosting",
+      "validation_score": 0.6266,
+      "validation": {
+        "OK": {
+          "precision": 0.9959,
+          "recall": 0.9998,
+          "support": 8064
+        },
+        "P4": {
+          "precision": 0.7586,
+          "recall": 0.4583,
+          "support": 48
+        },
+        "P3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 48
+        },
+        "P2": {
+          "precision": 0.4393,
+          "recall": 0.9792,
+          "support": 48
+        },
+        "P1": {
+          "precision": 0.96,
+          "recall": 0.5,
+          "support": 48
+        },
+        "macro_f1": 0.5666
+      },
+      "test": {
+        "OK": {
+          "precision": 0.9941,
+          "recall": 1.0,
+          "support": 8064
+        },
+        "P4": {
+          "precision": 0.6667,
+          "recall": 0.2,
+          "support": 30
+        },
+        "P3": {
+          "precision": 0.6486,
+          "recall": 0.7059,
+          "support": 34
+        },
+        "P2": {
+          "precision": 0.7674,
+          "recall": 0.5323,
+          "support": 62
+        },
+        "P1": {
+          "precision": 0.9636,
+          "recall": 0.803,
+          "support": 66
+        },
+        "macro_f1": 0.6971
+      }
+    }
+  ],
+  "test_report": "              precision    recall  f1-score   support\n\n          OK       0.99      1.00      1.00      8064\n          P4       0.67      0.20      0.31        30\n          P3       0.65      0.71      0.68        34\n          P2       0.77      0.53      0.63        62\n          P1       0.96      0.80      0.88        66\n\n    accuracy                           0.99      8256\n   macro avg       0.81      0.65      0.70      8256\nweighted avg       0.99      0.99      0.99      8256\n",
+  "rows": {
+    "train": 32035,
+    "validation": 8256,
+    "test": 8256
+  }
+}

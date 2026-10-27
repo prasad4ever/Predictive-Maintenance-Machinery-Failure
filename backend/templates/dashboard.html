@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ plant_name }} · Component watch</title>
+  <link rel="icon" href="/static/favicon.svg">
+  <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">{{ plant_name }}</p>
+      <h1>Next-24-hour component watch</h1>
+      <p class="quiet">Classifier: {{ model_name }}</p>
+    </div>
+    <div class="meta">
+      <time id="clock">—</time>
+      <span id="link" class="link">connecting</span>
+    </div>
+  </header>
+  <section id="counts" class="counts" aria-label="Priority counts"></section>
+  <main class="layout">
+    <section>
+      <h2>Machinery</h2>
+      <div id="machines" class="machines"></div>
+    </section>
+    <aside>
+      <h2>Open component items</h2>
+      <div id="alarms" class="alarms"></div>
+    </aside>
+  </main>
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>
